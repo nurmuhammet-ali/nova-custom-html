@@ -1,6 +1,6 @@
 <template>
     <FieldWrapper
-      class="{'bg-gray-100': true, 'dark:bg-gray-700': true, 'hidden': hidden}"
+      :class="{'bg-gray-100': true, 'dark:bg-gray-700': true, 'hidden': hidden}"
       v-if="currentField.visible"
     >
       <div
