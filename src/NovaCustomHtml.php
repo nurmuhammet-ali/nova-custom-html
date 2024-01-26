@@ -21,9 +21,17 @@ class NovaCustomHtml extends Field
      *
      * @var string
      */
-    public function html(string $html)
+    public function html(string $html): self
     {
         return $this->withMeta(['html' => $html]);
+    }
+
+    /**
+     * Full width
+     */
+    public function fullWidth(): self
+    {
+        return $this->withMeta(['fullWidth' => true]);
     }
 
     /**
@@ -31,12 +39,16 @@ class NovaCustomHtml extends Field
      *
      * @var string
      */
-    public function alert(string $message)
+    public function alert(string $message): self
     {
         return $this->withMeta(['alert_message' => $alert_message]);
     }
 
-    public function hidden(bool $hidden = true)
+    /**
+     * Hide 
+     * @param  bool|boolean
+     */
+    public function hidden(bool $hidden = true): self
     {
         return $this->withMeta(['hidden' => $hidden]);
     }

@@ -1,6 +1,6 @@
 <template>
     <FieldWrapper
-      :class="{'bg-gray-100': true, 'dark:bg-gray-700': true, 'hidden': hidden}"
+      :class="{'hidden': hidden, 'w-full': fullWidth}"
       v-if="currentField.visible"
     >
       <div
@@ -23,6 +23,7 @@ export default {
      * Set the initial, internal value for the field.
      */
     setInitialValue() {
+      this.fullWidth = this.field.fullWidth || true;
       this.value = this.field.value || ''
       this.html = this.field.html || ''
       this.alert_message = this.field.alert_message || null
